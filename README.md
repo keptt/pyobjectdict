@@ -11,13 +11,13 @@
 **The problem**
 
 When it comes to the Python `dict` syntax, what makes it clanky and annoying is the need to always pass keys as strings and use square brackets when accessing a `dict`'s value:
-```python
+```
 x = {'a': 1, 'b': 2}
 value = x['b'] # we have to write square brackets and use strings inside them
 ```
 
 It is made quite concise in JavaScript language where all you need is access your value through the dot syntax like the following:
-```javascript
+```
 x = {'a': 1, 'b': 2}
 value = x.b // no need to use square brackets or strings!
 ```
@@ -30,7 +30,7 @@ The object is called `PyObjectDict`.
 ### How to use
 
 import the package and try to initialize your PyObjectDict in a preferred way:
-```python
+```
 from object_dict import PyObjectDict
 
 a = PyObjectDict({'a': 2, 'b': 3, 'c': 10, 'd': 8})
@@ -40,7 +40,7 @@ b = PyObjectDict.form(**{'a': 2, 'b': 3, 'c': 4, 'g': 8})
 *Note:* `PyObjectDict` constructor works with types: `dict`, `OrderedDict`, and `PyObjectDict` (to create a copy)
 
 you may add new attributes to the object by simply using the dot syntax:
-```python
+```
 a.e = 1
 a.f = 1
 a.g = 1
@@ -49,7 +49,7 @@ a.i = 1
 ```
 
 you may then easily access any attribute by using:
-```python
+```
 print(a.a) # will print 2
 print(a.e) # will print 1
 ```
@@ -114,7 +114,7 @@ They are listed in the table above and an example of their usage can be seen bel
 
 ### An Example of Usage
 
-```python
+```
 from object_dict import PyObjectDict
 
 a = PyObjectDict({'a': 2, 'b': 3, 'c': 10, 'd': 8})

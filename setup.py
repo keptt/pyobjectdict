@@ -2,14 +2,14 @@ from setuptools import setup
 from os import path
 
 this_directory = path.abspath(path.dirname(__file__))
-with open(path.join(this_directory, 'pypireadme.md'), encoding='utf-8') as f:
+with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 
 setup(
     name = 'pyobjectdict',
     packages = ['pyobjectdict'],
-    version = '1.0.1',
+    version = '1.0.3',
     license='MIT',
     description = 'Package provides a js-like dictionary object with a more convenient support of dot syntax plus a few additional methods',
     long_description_content_type='text/markdown',
