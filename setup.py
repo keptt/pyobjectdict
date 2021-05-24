@@ -17,7 +17,7 @@ setup(
     author = 'Serhii Orkivskyi',
     author_email = '2blesteve@gmail.com',
     url = 'https://github.com/keptt/pyobjectdict',
-    download_url = 'https://github.com/keptt/pyobjectdict/archive/refs/tags/1.0.0.tar.gz',
+    download_url = 'https://github.com/keptt/pyobjectdict/archive/refs/tags/1.0.1.tar.gz',
     keywords = ['dict', 'objectdict', 'pyobjectdict', 'dot syntax', 'object', 'pyobject', 'js-like', 'js'],
     install_requires=[],
     python_requires='>=3.6',
