@@ -115,7 +115,7 @@ They are listed in the table above and an example of their usage can be seen bel
 ### An Example of Usage
 
 ```
-from object_dict import PyObjectDict
+from pyobjectdict import PyObjectDict
 
 a = PyObjectDict({'a': 2, 'b': 3, 'c': 10, 'd': 8})
 b = PyObjectDict.form(**{'a': 2, 'b': 3, 'c': 4, 'g': 8})
