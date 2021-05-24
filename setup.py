@@ -9,7 +9,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 setup(
     name = 'pyobjectdict',
     packages = ['pyobjectdict'],
-    version = '1.0.3',
+    version = '1.0.4',
     license='MIT',
     description = 'Package provides a js-like dictionary object with a more convenient support of dot syntax plus a few additional methods',
     long_description_content_type='text/markdown',
