@@ -1,4 +1,4 @@
-# ObjectDict
+# PyObjectDict
 
 ## Python dictionaries for more convenient use
 
@@ -24,20 +24,20 @@ value = x.b // no need to use square brackets or strings!
 
 **The solution**
 This simple package introduces a new Python `dict` object which has some similarities to the JavaScript object in terms of dot syntax.
-The object is called `ObjectDict`.
+The object is called `PyObjectDict`.
 
 
 ### How to use
 
-import the package and try to initialize your ObjectDict in a preferred way:
+import the package and try to initialize your PyObjectDict in a preferred way:
 ```python
-from object_dict import ObjectDict
+from object_dict import PyObjectDict
 
-a = ObjectDict({'a': 2, 'b': 3, 'c': 10, 'd': 8})
-b = ObjectDict.form(**{'a': 2, 'b': 3, 'c': 4, 'g': 8})
+a = PyObjectDict({'a': 2, 'b': 3, 'c': 10, 'd': 8})
+b = PyObjectDict.form(**{'a': 2, 'b': 3, 'c': 4, 'g': 8})
 ```
 
-*Note:* `ObjectDict` constructor works with types: `dict`, `OrderedDict`, and `ObjectDict` (to create a copy)
+*Note:* `PyObjectDict` constructor works with types: `dict`, `OrderedDict`, and `PyObjectDict` (to create a copy)
 
 you may add new attributes to the object by simply using the dot syntax:
 ```python
@@ -54,13 +54,13 @@ print(a.a) # will print 2
 print(a.e) # will print 1
 ```
 
-The `ObjectDict` also exposes a lot of additional convenience methods as well as standard `dict` methods.
+The `PyObjectDict` also exposes a lot of additional convenience methods as well as standard `dict` methods.
 They are listed in the table above and an example of their usage can be seen below it.
 
 <br />
 <br />
 
-### Methods of ObjectDict
+### Methods of PyObjectDict
 
 | Name              | Parameters                        | Return value                                | Description                                                                                                                               |
 | -------------     | -------------                     |-------------                                | -------------                                                                                                                             |
@@ -69,30 +69,30 @@ They are listed in the table above and an example of their usage can be seen bel
 | `items`           | -                                 | `list` of `tuple`s                          | returns the list of tuples containing key, value pairs of each item in the dicrionary                                                     |
 | `iteritems`       | -                                 | `iterator`                                  | iterator for `items` method                                                                                                               |
 | `values`          | -                                 | `list`                                      | returns the list of values of the dictionary                                                                                              |
-| `update`          | `other` (`ObjectDict`)            | `None`                                      | updates one `ObjectDict` with the other (merges them) in place. Returns nothing                                                           |
+| `update`          | `other` (`PyObjectDict`)            | `None`                                      | updates one `PyObjectDict` with the other (merges them) in place. Returns nothing                                                           |
 | `get`             | `key` (`str`), `default` (`None`) | type of `key` or type of `default` parameter| returns value of the `key` if key exists or `default` parameter (which is`None` by default)                                               |
-| `add`             | `other` (`ObjectDict`)            | `ObjectDict`                                | merges two `ObjectDict`s and returns a merged copy                                                                                        |
-| `add_each_value`  | `other` (`ObjectDict`)            | `ObjectDict`                                | merges the keys of two `ObjectDict`s and adds the corresponding key values together. returns a merged copy                                |
-| `sub`             | `other` (`ObjectDict`)            | `ObjectDict`                                | subtracts one `ObjectDict` from another and returns a copy containing not intersecting keys of the first `ObjectDict` with their values   |
-| `sub_each_value`  | `other` (`ObjectDict`)            | `ObjectDict`                                | subtracts the values of the corresponding keys of the first `ObjectDict` from the second one. Returns a copy                              |
-| `sub_by_value`    | `other` (`ObjectDict`)            | `ObjectDict`                                | the same as `sub` but subtraction happens by the unique `key: value` pairs not just the unique keys                                       |
+| `add`             | `other` (`PyObjectDict`)            | `PyObjectDict`                                | merges two `PyObjectDict`s and returns a merged copy                                                                                        |
+| `add_each_value`  | `other` (`PyObjectDict`)            | `PyObjectDict`                                | merges the keys of two `PyObjectDict`s and adds the corresponding key values together. returns a merged copy                                |
+| `sub`             | `other` (`PyObjectDict`)            | `PyObjectDict`                                | subtracts one `PyObjectDict` from another and returns a copy containing not intersecting keys of the first `PyObjectDict` with their values   |
+| `sub_each_value`  | `other` (`PyObjectDict`)            | `PyObjectDict`                                | subtracts the values of the corresponding keys of the first `PyObjectDict` from the second one. Returns a copy                              |
+| `sub_by_value`    | `other` (`PyObjectDict`)            | `PyObjectDict`                                | the same as `sub` but subtraction happens by the unique `key: value` pairs not just the unique keys                                       |
 
 <br />
 
-### Operators of ObjectDict
+### Operators of PyObjectDict
 
 | Name              | Parameters                | Return value  | Description                                                                                           |
 | -------------     | -------------             |-------------  | -------------                                                                                         |
-| `+`               | `other` (`ObjectDict`)    | `ObjectDict`  | the same as `add` method                                                                              |
-| `+=`              | `other` (`ObjectDict`)    | `ObjectDict`  | the same as `add` method but assigns the result to the `ObjectDict` to the left side of the operator  |
-| `\|`              | `other` (`ObjectDict`)    | `ObjectDict`  | the same as `add` method                                                                              |
-| `\|=`             | `other` (`ObjectDict`)    | `ObjectDict`  | the same as `+=` operator                                                                             |
-| `-`               | `other` (`ObjectDict`)    | `ObjectDict`  | the same as `sub` method                                                                              |
-| `-=`              | `other` (`ObjectDict`)    | `ObjectDict`  | the same as `sub` method but assigns the result to the `ObjectDict` to the left side of the operator  |
+| `+`               | `other` (`PyObjectDict`)    | `PyObjectDict`  | the same as `add` method                                                                              |
+| `+=`              | `other` (`PyObjectDict`)    | `PyObjectDict`  | the same as `add` method but assigns the result to the `PyObjectDict` to the left side of the operator  |
+| `\|`              | `other` (`PyObjectDict`)    | `PyObjectDict`  | the same as `add` method                                                                              |
+| `\|=`             | `other` (`PyObjectDict`)    | `PyObjectDict`  | the same as `+=` operator                                                                             |
+| `-`               | `other` (`PyObjectDict`)    | `PyObjectDict`  | the same as `sub` method                                                                              |
+| `-=`              | `other` (`PyObjectDict`)    | `PyObjectDict`  | the same as `sub` method but assigns the result to the `PyObjectDict` to the left side of the operator  |
 
 <br />
 
-### Dunder methods of ObjectDict
+### Dunder methods of PyObjectDict
 
 | Name              | Parameters    | Return value  | Description                                           |
 | -------------     | ------------- |-------------  | -------------                                         |
@@ -101,12 +101,12 @@ They are listed in the table above and an example of their usage can be seen bel
 
 <br />
 
-### Constructors of ObjectDict
+### Constructors of PyObjectDict
 
 | Name              | Parameters    | Return value  | Description                                                                                       |
 | -------------     | ------------- |-------------  | -------------                                                                                     |
-| `ObjectDict`      | -             | `ObjectDict`  | creates an `ObjectDict` from `dict`, `OrderedDict`, or `ObjectDict` (copy)                        |
-| `ObjectDict.from` | -             | `ObjectDict`  | creates an `ObjectDict` from the key value pairs that are successively passed to the constructor  |
+| `PyObjectDict`      | -             | `PyObjectDict`  | creates an `PyObjectDict` from `dict`, `OrderedDict`, or `PyObjectDict` (copy)                        |
+| `PyObjectDict.from` | -             | `PyObjectDict`  | creates an `PyObjectDict` from the key value pairs that are successively passed to the constructor  |
 
 
 <br />
@@ -115,10 +115,10 @@ They are listed in the table above and an example of their usage can be seen bel
 ### An Example of Usage
 
 ```python
-from object_dict import ObjectDict
+from object_dict import PyObjectDict
 
-a = ObjectDict({'a': 2, 'b': 3, 'c': 10, 'd': 8})
-b = ObjectDict.form(**{'a': 2, 'b': 3, 'c': 4, 'g': 8})
+a = PyObjectDict({'a': 2, 'b': 3, 'c': 10, 'd': 8})
+b = PyObjectDict.form(**{'a': 2, 'b': 3, 'c': 4, 'g': 8})
 
 print('a:', a)
 print('b:', b)
@@ -131,8 +131,8 @@ print('c.keys():', c.keys())
 print('c.items():', c.items())
 print('c.iteritems():', list(c.iteritems()))
 print('c.values():', c.values())
-print('c.update(ObjectDict({"a": 1, "b": 2, "c": 3})):', c.update(ObjectDict({'a': 1, 'b': 2, 'c': 3})))
-print('c.update(ObjectDict({"a": 1, "b": 2, "c": 3})):', c.update(ObjectDict({'a': 1, 'b': 2, 'c': 3})))
+print('c.update(PyObjectDict({"a": 1, "b": 2, "c": 3})):', c.update(PyObjectDict({'a': 1, 'b': 2, 'c': 3})))
+print('c.update(PyObjectDict({"a": 1, "b": 2, "c": 3})):', c.update(PyObjectDict({'a': 1, 'b': 2, 'c': 3})))
 
 print('iteratibng over c:')
 for k in c:
@@ -166,38 +166,38 @@ print('a after a |= b', a)
 The result of the code above will be:
 
 ```
-a: ObjectDict({'a': 2, 'b': 3, 'c': 10, 'd': 8})
-b: ObjectDict({'a': 2, 'b': 3, 'c': 4, 'g': 8})
-c: ObjectDict({'c': 10, 'd': 8})
+a: PyObjectDict({'a': 2, 'b': 3, 'c': 10, 'd': 8})
+b: PyObjectDict({'a': 2, 'b': 3, 'c': 4, 'g': 8})
+c: PyObjectDict({'c': 10, 'd': 8})
 c.length(): 2
 c.keys(): ['c', 'd']
 c.items(): [('c', 10), ('d', 8)]
 list(c.iteritems()): [('c', 10), ('d', 8)]
 c.values(): [10, 8]
-c.update(ObjectDict({"a": 1, "b": 2, "c": 3})): None
-c.update(ObjectDict({"a": 1, "b": 2, "c": 3})): None
+c.update(PyObjectDict({"a": 1, "b": 2, "c": 3})): None
+c.update(PyObjectDict({"a": 1, "b": 2, "c": 3})): None
 iteratibng over c:
 key:  c
 key:  d
 key:  a
 key:  b
-a + b: ObjectDict({'a': 2, 'b': 3, 'c': 4, 'd': 8, 'g': 8})
-a | b: ObjectDict({'a': 2, 'b': 3, 'c': 4, 'd': 8, 'g': 8})
-a.add(b): ObjectDict({'a': 2, 'b': 3, 'c': 4, 'd': 8, 'g': 8})
-a.add_each_value(b): ObjectDict({'a': 4, 'b': 6, 'c': 14, 'd': 8})
-a after a.update(b): ObjectDict({'a': 2, 'b': 3, 'c': 4, 'd': 8, 'g': 8})
-a after adding "cc": 12: ObjectDict({'a': 2, 'b': 3, 'c': 4, 'd': 8, 'g': 8, 'cc': 12})
-b after adding "cc": 12: ObjectDict({'a': 2, 'b': 3, 'c': 4, 'g': 8, 'cc': 12})
-a - b: ObjectDict({'d': 8})
-a.sub(b): ObjectDict({'d': 8})
-a.sub_by_value(b): ObjectDict({'d': 8})
-a.sub_each_value(b): ObjectDict({'a': 0, 'b': 0, 'c': 0, 'd': 8, 'g': 0, 'cc': 0})
-a after a += b: ObjectDict({'a': 2, 'b': 3, 'c': 4, 'd': 8, 'g': 8, 'cc': 12})
-a after a -= b: ObjectDict({'d': 8})
-a after a |= b ObjectDict({'d': 8, 'a': 2, 'b': 3, 'c': 4, 'g': 8, 'cc': 12})
+a + b: PyObjectDict({'a': 2, 'b': 3, 'c': 4, 'd': 8, 'g': 8})
+a | b: PyObjectDict({'a': 2, 'b': 3, 'c': 4, 'd': 8, 'g': 8})
+a.add(b): PyObjectDict({'a': 2, 'b': 3, 'c': 4, 'd': 8, 'g': 8})
+a.add_each_value(b): PyObjectDict({'a': 4, 'b': 6, 'c': 14, 'd': 8})
+a after a.update(b): PyObjectDict({'a': 2, 'b': 3, 'c': 4, 'd': 8, 'g': 8})
+a after adding "cc": 12: PyObjectDict({'a': 2, 'b': 3, 'c': 4, 'd': 8, 'g': 8, 'cc': 12})
+b after adding "cc": 12: PyObjectDict({'a': 2, 'b': 3, 'c': 4, 'g': 8, 'cc': 12})
+a - b: PyObjectDict({'d': 8})
+a.sub(b): PyObjectDict({'d': 8})
+a.sub_by_value(b): PyObjectDict({'d': 8})
+a.sub_each_value(b): PyObjectDict({'a': 0, 'b': 0, 'c': 0, 'd': 8, 'g': 0, 'cc': 0})
+a after a += b: PyObjectDict({'a': 2, 'b': 3, 'c': 4, 'd': 8, 'g': 8, 'cc': 12})
+a after a -= b: PyObjectDict({'d': 8})
+a after a |= b PyObjectDict({'d': 8, 'a': 2, 'b': 3, 'c': 4, 'g': 8, 'cc': 12})
 ```
 
 ### Notes
 
 Remember that in JavaScripts objects it is possible to access a non-existing attribute and receve an `undefined` value.
-However, since Python has no concept of `undefined` and checking for `None` could be missleading (+ the limitations of Python objects), you cannot access an unexisting attribute of `ObjectDict` without triggering an `AttributeError` exception. Alternatively you can use `get` method as in standard Python dicts to check if the attribute exists before accessing it.
+However, since Python has no concept of `undefined` and checking for `None` could be missleading (+ the limitations of Python objects), you cannot access an unexisting attribute of `PyObjectDict` without triggering an `AttributeError` exception. Alternatively you can use `get` method as in standard Python dicts to check if the attribute exists before accessing it.

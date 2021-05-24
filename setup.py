@@ -1,16 +1,16 @@
 from distutils.core import setup
 
 setup(
-  name = 'objectdict',
-  packages = ['objectdict'],
-  version = '0.1.1',
+  name = 'pyobjectdict',
+  packages = ['pyobjectdict'],
+  version = '1.0.0',
   license='MIT',
-  description = 'Package provides js-like dictionary object with a more convenient support of dot syntax plus a few additional methods',
+  description = 'Package provides a js-like dictionary object with a more convenient support of dot syntax plus a few additional methods',
   author = 'Serhii Orkivskyi',
   author_email = '2blesteve@gmail.com',
-  url = 'https://github.com/keptt/objectdict',
-  download_url = 'https://github.com/keptt/objectdict/archive/refs/tags/0.1.0.tar.gz',
-  keywords = ['dict', 'objectdict', 'dot syntax', 'object', 'js-like'],
+  url = 'https://github.com/keptt/pyobjectdict',
+  download_url = 'https://github.com/keptt/pyobjectdict/archive/refs/tags/1.0.0.tar.gz',
+  keywords = ['dict', 'objectdict', 'pyobjectdict', 'dot syntax', 'object', 'pyobject', 'js-like', 'js'],
   install_requires=[],
   python_requires='>=3.6',
   classifiers=[
