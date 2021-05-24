@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(
   name = 'objectdict',
   packages = ['objectdict'],
-  version = '0.1.0',
+  version = '0.1.1',
   license='MIT',
   description = 'Package provides js-like dictionary object with a more convenient support of dot syntax plus a few additional methods',
   author = 'Serhii Orkivskyi',
